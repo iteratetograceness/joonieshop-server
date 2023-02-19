@@ -30,7 +30,7 @@ export default () => {
     const [product] = await productService.list({}, { take: 1 })
 
     res.json({
-      message: `Welcome to ${product.title}!`
+      message: `Welcome to ${product.title}.`
     })
   })
 
