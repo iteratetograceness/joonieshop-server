@@ -30,7 +30,7 @@ const STORE_CORS = process.env.STORE_CORS || "http://192.168.1.153:8000";
 
 // Database URL (here we use a local database called medusa-development)
 const DATABASE_URL =
-  process.env.DATABASE_URL || "postgres://localhost/grace";
+  process.env.DATABASE_URL || "postgres://localhost:5432";
 
 // Medusa uses Redis, so this needs configuration as well
 const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
@@ -59,10 +59,6 @@ module.exports = {
     database_type: "postgres",
     store_cors: STORE_CORS,
     admin_cors: ADMIN_CORS,
-    database_extra:
-    process.env.NODE_ENV !== "development"
-      ? { ssl: { rejectUnauthorized: false } }
-      : {},
   },
   plugins,
 };
