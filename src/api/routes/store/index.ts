@@ -8,10 +8,7 @@ const storeRouter = Router()
 export function getStoreRouter(storeCorsOptions): Router {
   storeRouter.use(cors(storeCorsOptions), bodyParser.json())
 
-  storeRouter.post(
-    "/store/my-custom-path",
-    wrapHandler(customRouteHandler)
-  )
+  storeRouter.get('/store/my-custom-path', wrapHandler(customRouteHandler))
 
   return storeRouter
 }
