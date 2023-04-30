@@ -1,3 +1,10 @@
-# Important Links
+# JOONIESHOP SERVER
 
-- [Guide for Deploying on Heroku](https://docs.medusajs.com/deployments/server/deploying-on-heroku)
+## Local Development
+
+### Starting and stopping a Redis Server
+
+```bash 
+brew services start redis
+brew services stop redis
+```

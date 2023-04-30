@@ -1,13 +1,6 @@
 import { Router } from "express"
 
-export default () => {
-  const router = Router()
-
-  router.get("/", (req, res) => {
-    res.json({
-      message: "y r u here."
-    })
-  })
-
-  return router;
+export default (rootDirectory: string): Router | Router[] => {
+  // add your custom routes here
+  return []
 }
