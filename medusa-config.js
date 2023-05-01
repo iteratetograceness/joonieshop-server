@@ -32,6 +32,7 @@ const DATABASE_URL = process.env.DATABASE_URL || 'postgres://localhost:5432'
 
 // Medusa uses Redis, so this needs configuration as well
 const REDIS_URL = process.env.REDIS_URL || 'redis://localhost:6379'
+const CACHE_REDIS_URL = process.env.CACHE_REDIS_URL || 'redis://localhost:6379'
 const EVENTS_REDIS_URL =
   process.env.EVENTS_REDIS_URL || 'redis://localhost:6379'
 
@@ -72,7 +73,7 @@ const modules = {
   cacheService: {
     resolve: '@medusajs/cache-redis',
     options: {
-      redisUrl: REDIS_URL,
+      redisUrl: CACHE_REDIS_URL,
     },
   },
 }
