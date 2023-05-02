@@ -80,5 +80,10 @@
     ],
     "coverageDirectory": "./coverage",
     "testEnvironment": "node"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@medusajs/medusa@1.9.0": "patches/@medusajs__medusa@1.9.0.patch"
+    }
   }
 }
