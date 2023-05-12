@@ -56,6 +56,26 @@ const plugins = [
       autoRebuild: true,
     },
   },
+  {
+    resolve: `medusa-payment-paypal`,
+    options: {
+      sandbox: process.env.PAYPAL_SANDBOX,
+      client_id: process.env.PAYPAL_CLIENT_ID,
+      client_secret: process.env.PAYPAL_CLIENT_SECRET,
+      auth_webhook_id: process.env.PAYPAL_AUTH_WEBHOOK_ID,
+    },
+  },
+  {
+    // TODO: Create a subscriber
+    resolve: 'medusa-fulfillment-shippo',
+    options: {
+      api_key: process.env.SHIPPO_API_KEY,
+      weight_unit_type: 'g',
+      dimension_unit_type: 'cm',
+      webhook_secret: '',
+      webhook_test_mode: false,
+    },
+  },
 ]
 
 const modules = {
