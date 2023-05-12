@@ -84,9 +84,16 @@ const modules = {
     options: {
       redisUrl: EVENTS_REDIS_URL,
       queueOptions: {
-        settings: {
-          sharedConnection: true,
-        },
+        blockingConnection: false,
+      },
+      workerOptions: {
+        autorun: false,
+        stalledInterval: 7200 * 1000,
+        blockingConnection: false,
+        drainDelay: 7200,
+        lockDuration: 7200 * 1000,
+        skipStalledCheck: true,
+        stalledInterval: 7200 * 1000,
       },
     },
   },
