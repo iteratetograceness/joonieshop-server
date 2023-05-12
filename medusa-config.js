@@ -79,17 +79,17 @@ const plugins = [
 ]
 
 const modules = {
-  // eventBus: {
-  //   resolve: '@medusajs/event-bus-redis',
-  //   options: {
-  //     redisUrl: EVENTS_REDIS_URL,
-  //     queueOptions: {
-  //       settings: {
-  //         sharedConnection: true,
-  //       },
-  //     },
-  //   },
-  // },
+  eventBus: {
+    resolve: '@medusajs/event-bus-redis',
+    options: {
+      redisUrl: EVENTS_REDIS_URL,
+      queueOptions: {
+        settings: {
+          sharedConnection: true,
+        },
+      },
+    },
+  },
   cacheService: {
     resolve: '@medusajs/cache-redis',
     options: {
