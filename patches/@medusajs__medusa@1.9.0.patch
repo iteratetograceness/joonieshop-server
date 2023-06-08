@@ -605,7 +605,7 @@ index 8b323fe918683e22512091230997ea8749176b6e..7ed447ed10e43b789e06ef0c02c19941
 +                  case 1:
 +                    jobs = _b.sent()
 +                    if (!!jobs.length) return [3 /*break*/, 3]
-+                    return [4 /*yield*/, (0, sleep_1.sleep)(2 * 60 * 60 * 1000)]
++                    return [4 /*yield*/, (0, sleep_1.sleep)(30 * 60 * 1000)]
 +                  case 2:
 +                    _b.sent()
 +                    return [2 /*return*/, 'continue']
@@ -643,7 +643,7 @@ index 8b323fe918683e22512091230997ea8749176b6e..7ed447ed10e43b789e06ef0c02c19941
 +                    ]
 +                  case 4:
 +                    _b.sent()
-+                    return [4 /*yield*/, (0, sleep_1.sleep)(2 * 60 * 60 * 1000)]
++                    return [4 /*yield*/, (0, sleep_1.sleep)(30 * 60 * 1000)]
 +                  case 5:
 +                    _b.sent()
 +                    return [2 /*return*/]
