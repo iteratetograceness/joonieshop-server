@@ -1,9 +1,6 @@
 lockfileVersion: 5.4
 
 patchedDependencies:
-  '@medusajs/event-bus-redis@1.8.3':
-    hash: va7vanc3gnfx6igw2dv54sfe4q
-    path: patches/@medusajs__event-bus-redis@1.8.3.patch
   '@medusajs/medusa@1.9.0':
     hash: grnkxpe2f5rywtptdvdf7x5suy
     path: patches/@medusajs__medusa@1.9.0.patch
@@ -59,7 +56,7 @@ specifiers:
 dependencies:
   '@medusajs/admin': 3.0.0_qz5sptq7ezfplcbrstxpgpbukm
   '@medusajs/cache-redis': 1.8.3
-  '@medusajs/event-bus-redis': 1.8.3_va7vanc3gnfx6igw2dv54sfe4q
+  '@medusajs/event-bus-redis': 1.8.3
   '@medusajs/medusa': 1.9.0_grnkxpe2f5rywtptdvdf7x5suy_uhtw6d4222gcinkvy2us7i5ani
   '@medusajs/medusa-cli': 1.3.11
   body-parser: 1.20.2
@@ -2557,7 +2554,7 @@ packages:
       - typeorm-aurora-data-api-driver
     dev: false
 
-  /@medusajs/event-bus-redis/1.8.3_va7vanc3gnfx6igw2dv54sfe4q:
+  /@medusajs/event-bus-redis/1.8.3:
     resolution: {integrity: sha512-jmGNL7lhCYM+U51tMorj9qUMuZRbVCxZF6Z3iYiAK7BHnyo+UFqTElMFWlOJFZTXWVha7IcLKZhBPk4oqz7JMQ==}
     dependencies:
       '@medusajs/modules-sdk': 1.8.3_ioredis@5.3.2
@@ -2585,7 +2582,6 @@ packages:
       - ts-node
       - typeorm-aurora-data-api-driver
     dev: false
-    patched: true
 
   /@medusajs/medusa-cli/1.3.11:
     resolution: {integrity: sha512-wh5lB2zl2dEWMyP5rRzDu+FHl/gQbx9q8L1bRdysm/HBAdQbvgrRhHWsogE7cNHYDQeZQyUrhqfQ9gkx1Argpg==}
