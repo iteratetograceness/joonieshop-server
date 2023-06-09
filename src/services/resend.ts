@@ -8,6 +8,8 @@ import {
 } from '@medusajs/medusa'
 
 class ResendService extends AbstractNotificationService {
+  static LIFE_TIME = Lifetime.SCOPED
+
   static identifier = 'resend'
 
   private resendClient: Resend
