@@ -87,8 +87,6 @@ const modules = {
       workerOptions: {
         stalledInterval: 300000,
         drainDelay: 10,
-        lockRenewTime: 300000,
-        lockDuration: 600000,
       },
     },
   },
