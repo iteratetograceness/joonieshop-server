@@ -83,7 +83,9 @@ const modules = {
     resolve: '@medusajs/event-bus-redis',
     options: {
       redisUrl: EVENTS_REDIS_URL,
-      queueOptions: {},
+      queueOptions: {
+        blockingConnection: false,
+      },
       workerOptions: {
         stalledInterval: 300000,
         drainDelay: 10,
@@ -99,7 +101,7 @@ const modules = {
 }
 
 const projectConfig = {
-  // redis_url: REDIS_URL,
+  redis_url: REDIS_URL,
   database_url: DATABASE_URL,
   database_type: 'postgres',
   database_logging: false,
