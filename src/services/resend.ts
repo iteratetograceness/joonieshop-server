@@ -5,7 +5,7 @@ import fs from 'fs'
 import {
   AbstractNotificationService,
   Customer,
-  // CustomerService,
+  CustomerService,
 } from '@medusajs/medusa'
 
 class ResendService extends AbstractNotificationService {
@@ -17,12 +17,12 @@ class ResendService extends AbstractNotificationService {
   private templatePath_: string
   private from_: string
 
-  // private customerService_: CustomerService
+  private customerService_: CustomerService
 
-  constructor({}) {
-    super({})
+  constructor({ customerService }) {
+    super({ customerService })
 
-    // this.customerService_ = customerService
+    this.customerService_ = customerService
 
     this.from_ = 'hello@shop.joonie.dev'
     this.templatePath_ = 'data/templates'
