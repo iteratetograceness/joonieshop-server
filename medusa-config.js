@@ -66,7 +66,7 @@ const plugins = [
     },
   },
   {
-    // TODO: Create a subscriber
+    // TODO: Create a subscriber.
     resolve: 'medusa-fulfillment-shippo',
     options: {
       api_key: process.env.SHIPPO_API_KEY,
