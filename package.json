@@ -1,8 +1,7 @@
 {
-  "name": "medusa-starter-default",
+  "name": "joonieshop-server",
   "version": "0.0.1",
-  "description": "A starter for Medusa projects.",
-  "author": "Sebastian Rindom <skrindom@gmail.com>",
+  "description": "Medusa server for joonieshop.",
   "license": "MIT",
   "scripts": {
     "clean": "cross-env ./node_modules/.bin/rimraf dist",
@@ -33,13 +32,14 @@
     "medusa-payment-paypal": "^4.0.0",
     "medusa-payment-stripe": "^1.1.53",
     "resend": "^0.15.1",
-    "typeorm": "^0.3.11"
+    "typeorm": "^0.3.16"
   },
   "keywords": [
-    "sqlite",
+    "postgres",
     "ecommerce",
     "headless",
-    "medusa"
+    "medusa",
+    "vercel kv"
   ],
   "devDependencies": {
     "@babel/cli": "^7.21.5",
