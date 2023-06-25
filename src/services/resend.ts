@@ -89,10 +89,7 @@ class ResendService extends AbstractNotificationService {
       })
       .catch((error) => {
         status = 'failed'
-        console.log(error)
       })
-
-    console.log(status)
 
     // @ts-ignore
     if (sendOptions.attachments) delete sendOptions.attachments
