@@ -1,8 +1,8 @@
 diff --git a/dist/services/event-bus.js b/dist/services/event-bus.js
-index 8b323fe918683e22512091230997ea8749176b6e..7ed447ed10e43b789e06ef0c02c19941270ae578 100644
+index c55ca0029584bcfb933b09f502b19fd3450b3480..a8e04983f40c8f494d693c26091debe4e96f2bfa 100644
 --- a/dist/services/event-bus.js
 +++ b/dist/services/event-bus.js
-@@ -1,263 +1,425 @@
+@@ -1,242 +1,394 @@
 -"use strict";
 -var __extends = (this && this.__extends) || (function () {
 +'use strict'
@@ -338,7 +338,6 @@ index 8b323fe918683e22512091230997ea8749176b6e..7ed447ed10e43b789e06ef0c02c19941
 +    }
 +    return __awaiter(this, void 0, void 0, function () {
 +      var manager, isBulkEmit, events, stagedJobs
-+      var _this = this
 +      return __generator(this, function (_a) {
 +        switch (_a.label) {
 +          case 0:
@@ -359,42 +358,12 @@ index 8b323fe918683e22512091230997ea8749176b6e..7ed447ed10e43b789e06ef0c02c19941
 +                    options: options,
 +                  },
 +                ]
-+            events = events.filter(function (event) {
-+              var _a, _b, _c
-+              return (_c =
-+                (_b =
-+                  (_a = _this.eventBusModuleService_) === null || _a === void 0
-+                    ? void 0
-+                    : _a.retrieveSubscribers(event.eventName)) === null ||
-+                _b === void 0
-+                  ? void 0
-+                  : _b.length) !== null && _c !== void 0
-+                ? _c
-+                : false
-+            })
-+            stagedJobs = []
-+            if (!events.length) return [3 /*break*/, 2]
 +            return [
 +              4 /*yield*/,
 +              this.stagedJobService_.withTransaction(manager).create(events),
 +            ]
 +          case 1:
-+            /**
-+             * We store events in the database when in an ongoing transaction.
-+             *
-+             * If we are in a long-running transaction, the ACID properties of a
-+             * transaction ensure, that events are kept invisible to the enqueuer
-+             * until the transaction has committed.
-+             *
-+             * This patterns also gives us at-least-once delivery of events, as events
-+             * are only removed from the database, if they are successfully delivered.
-+             *
-+             * In case of a failing transaction, jobs stored in the database are removed
-+             * as part of the rollback.
-+             */
 +            stagedJobs = _a.sent()
-+            _a.label = 2
-+          case 2:
 +            return [2 /*return*/, !isBulkEmit ? stagedJobs[0] : stagedJobs]
          }
 -        var cloned = new this.constructor({
@@ -453,7 +422,6 @@ index 8b323fe918683e22512091230997ea8749176b6e..7ed447ed10e43b789e06ef0c02c19941
 -        if (options === void 0) { options = {}; }
 -        return __awaiter(this, void 0, void 0, function () {
 -            var manager, isBulkEmit, events, stagedJobs;
--            var _this = this;
 -            return __generator(this, function (_a) {
 -                switch (_a.label) {
 -                    case 0:
@@ -472,32 +440,12 @@ index 8b323fe918683e22512091230997ea8749176b6e..7ed447ed10e43b789e06ef0c02c19941
 -                                    options: options,
 -                                },
 -                            ];
--                        events = events.filter(function (event) {
--                            var _a, _b, _c;
--                            return (_c = (_b = (_a = _this.eventBusModuleService_) === null || _a === void 0 ? void 0 : _a.retrieveSubscribers(event.eventName)) === null || _b === void 0 ? void 0 : _b.length) !== null && _c !== void 0 ? _c : false;
--                        });
--                        stagedJobs = [];
--                        if (!events.length) return [3 /*break*/, 2];
 -                        return [4 /*yield*/, this.stagedJobService_
 -                                .withTransaction(manager)
 -                                .create(events)];
 -                    case 1:
--                        /**
--                         * We store events in the database when in an ongoing transaction.
--                         *
--                         * If we are in a long-running transaction, the ACID properties of a
--                         * transaction ensure, that events are kept invisible to the enqueuer
--                         * until the transaction has committed.
--                         *
--                         * This patterns also gives us at-least-once delivery of events, as events
--                         * are only removed from the database, if they are successfully delivered.
--                         *
--                         * In case of a failing transaction, jobs stored in the database are removed
--                         * as part of the rollback.
--                         */
 -                        stagedJobs = _a.sent();
--                        _a.label = 2;
--                    case 2: return [2 /*return*/, (!isBulkEmit ? stagedJobs[0] : stagedJobs)];
+-                        return [2 /*return*/, (!isBulkEmit ? stagedJobs[0] : stagedJobs)];
 -                }
 -            });
 -        });

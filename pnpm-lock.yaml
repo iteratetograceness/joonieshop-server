@@ -1,27 +1,27 @@
 lockfileVersion: '6.0'
 
 settings:
-  autoInstallPeers: false
+  autoInstallPeers: true
   excludeLinksFromLockfile: false
 
 patchedDependencies:
-  '@medusajs/medusa@1.9.0':
-    hash: tyowoc5kfxctvjpra75y24b4yy
-    path: patches/@medusajs__medusa@1.9.0.patch
+  '@medusajs/medusa@1.12.0':
+    hash: 6hcjeddxpd73rjflmvoibx4tvi
+    path: patches/@medusajs__medusa@1.12.0.patch
 
 dependencies:
   '@medusajs/admin':
-    specifier: ^3.0.0
-    version: 3.0.0(@medusajs/medusa@1.9.0)(@types/node@18.16.3)(@types/react@18.2.14)(csstype@3.1.2)
+    specifier: ^6.0.0
+    version: 6.0.0(@medusajs/medusa@1.12.0)(@types/node@18.16.3)(@types/react@18.2.14)(csstype@3.1.2)
   '@medusajs/cache-redis':
-    specifier: ^1.8.3
-    version: 1.8.3(pg@8.11.0)
+    specifier: ^1.8.7
+    version: 1.8.7
   '@medusajs/medusa':
-    specifier: ^1.9.0
-    version: 1.9.0(patch_hash=tyowoc5kfxctvjpra75y24b4yy)(@babel/core@7.21.5)(@medusajs/types@1.8.3)(@types/ioredis-mock@8.2.2)(medusa-interfaces@1.3.7)(pg@8.11.0)(typeorm@0.3.16)
+    specifier: ^1.12.0
+    version: 1.12.0(patch_hash=6hcjeddxpd73rjflmvoibx4tvi)(@babel/core@7.21.5)(@medusajs/types@1.8.7)(@types/ioredis-mock@8.2.2)(medusa-interfaces@1.3.7)(typeorm@0.3.16)
   '@medusajs/medusa-cli':
     specifier: ^1.3.11
-    version: 1.3.11(ioredis@5.3.2)(pg@8.11.0)(redis@3.1.2)
+    version: 1.3.11(ioredis@5.3.2)(pg@8.11.0)
   awilix:
     specifier: ^8.0.1
     version: 8.0.1
@@ -54,7 +54,7 @@ dependencies:
     version: 1.0.23(medusa-interfaces@1.3.7)
   medusa-payment-paypal:
     specifier: ^4.0.0
-    version: 4.0.0(@medusajs/medusa@1.9.0)
+    version: 4.0.0(@medusajs/medusa@1.12.0)
   medusa-payment-stripe:
     specifier: ^1.1.53
     version: 1.1.53(medusa-interfaces@1.3.7)
@@ -63,7 +63,7 @@ dependencies:
     version: 0.15.1
   typeorm:
     specifier: ^0.3.16
-    version: 0.3.16(ioredis@5.3.2)(pg@8.11.0)(redis@3.1.2)(sqlite3@5.1.6)
+    version: 0.3.16(ioredis@5.3.2)(pg@8.11.0)(sqlite3@5.1.6)
 
 devDependencies:
   '@babel/cli':
@@ -2319,8 +2319,8 @@ packages:
       - supports-color
     dev: false
 
-  /@medusajs/admin-ui@1.8.3(@medusajs/medusa@1.9.0)(@types/node@18.16.3)(@types/react@18.2.14)(csstype@3.1.2):
-    resolution: {integrity: sha512-yBNRpIqnit7xDzZOyow/O0xssgAcbNsmdLf2ziy0bsGBygVxWz31LS+cQoWlCSIB68wUL3mPoNA8iEhQW6dU2w==}
+  /@medusajs/admin-ui@1.8.7(@medusajs/medusa@1.12.0)(@types/node@18.16.3)(@types/react@18.2.14)(csstype@3.1.2):
+    resolution: {integrity: sha512-xURSQwUc3aqA2H7gi8pCKXh/K1peZycUL+MDV76h3Wz3ywJAFSPESO60XjXhlAJJxREVsQxanxxTeBLUsOkFJA==}
     dependencies:
       '@hookform/error-message': 2.0.1(react-dom@18.2.0)(react-hook-form@7.38.0)(react@18.2.0)
       '@radix-ui/react-accordion': 1.1.2(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
@@ -2329,6 +2329,7 @@ packages:
       '@radix-ui/react-dialog': 1.0.4(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-dropdown-menu': 2.0.5(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-popover': 1.0.6(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-portal': 1.0.3(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-radio-group': 1.1.3(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-select': 1.2.2(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-switch': 1.0.3(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
@@ -2344,7 +2345,7 @@ packages:
       copy-to-clipboard: 3.3.3
       emoji-picker-react: 4.4.9(react@18.2.0)
       framer-motion: 9.1.7(react-dom@18.2.0)(react@18.2.0)
-      medusa-react: 6.0.0(@medusajs/medusa@1.9.0)(@tanstack/react-query@4.22.0)(react-dom@18.2.0)(react@18.2.0)
+      medusa-react: 9.0.0(@medusajs/medusa@1.12.0)(@tanstack/react-query@4.22.0)(react-dom@18.2.0)(react@18.2.0)
       moment: 2.29.4
       pluralize: 8.0.0
       postcss: 8.4.24
@@ -2357,15 +2358,15 @@ packages:
       react-dnd: 16.0.1(@types/node@18.16.3)(@types/react@18.2.14)(react@18.2.0)
       react-dnd-html5-backend: 16.0.1
       react-dom: 18.2.0(react@18.2.0)
-      react-helmet: 6.1.0(react@18.2.0)
+      react-helmet-async: 1.3.0(react-dom@18.2.0)(react@18.2.0)
       react-highlight-words: 0.18.0(react@18.2.0)
       react-hook-form: 7.38.0(react@18.2.0)
-      react-hot-toast: 2.4.1(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0)
+      react-hot-toast: 2.4.0(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0)
       react-hotkeys-hook: 3.4.7(react-dom@18.2.0)(react@18.2.0)
       react-json-tree: 0.17.0(@types/react@18.2.14)(react@18.2.0)
       react-jwt: 1.2.0(react@18.2.0)
       react-nestable: 2.0.0
-      react-router-dom: 6.14.0(react-dom@18.2.0)(react@18.2.0)
+      react-router-dom: 6.8.0(react-dom@18.2.0)(react@18.2.0)
       react-select: 5.7.3(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
       react-table: 7.8.0(react@18.2.0)
       tailwindcss: 3.2.2(postcss@8.4.24)
@@ -2391,14 +2392,14 @@ packages:
       - ts-node
     dev: false
 
-  /@medusajs/admin@3.0.0(@medusajs/medusa@1.9.0)(@types/node@18.16.3)(@types/react@18.2.14)(csstype@3.1.2):
-    resolution: {integrity: sha512-tGMKWDyCfqr5K/0ksCi0x7LZinSbDYFYRXRbawCLSiYFWrJdKdlWAy6R8tjadX5KZw7reca7DncaOiCgBjiD6w==}
+  /@medusajs/admin@6.0.0(@medusajs/medusa@1.12.0)(@types/node@18.16.3)(@types/react@18.2.14)(csstype@3.1.2):
+    resolution: {integrity: sha512-pts+3KYCS0Qy/B+tQJ5hfxVRK8W9vFkgskwtFZNrD5JnFTKH1DptqoEjW3ErvXNcgH0esuXqJu+lebBuB/j7+w==}
     hasBin: true
     peerDependencies:
-      '@medusajs/medusa': 1.9.0
+      '@medusajs/medusa': 1.12.0
     dependencies:
-      '@medusajs/admin-ui': 1.8.3(@medusajs/medusa@1.9.0)(@types/node@18.16.3)(@types/react@18.2.14)(csstype@3.1.2)
-      '@medusajs/medusa': 1.9.0(patch_hash=tyowoc5kfxctvjpra75y24b4yy)(@babel/core@7.21.5)(@medusajs/types@1.8.3)(@types/ioredis-mock@8.2.2)(medusa-interfaces@1.3.7)(pg@8.11.0)(typeorm@0.3.16)
+      '@medusajs/admin-ui': 1.8.7(@medusajs/medusa@1.12.0)(@types/node@18.16.3)(@types/react@18.2.14)(csstype@3.1.2)
+      '@medusajs/medusa': 1.12.0(patch_hash=6hcjeddxpd73rjflmvoibx4tvi)(@babel/core@7.21.5)(@medusajs/types@1.8.7)(@types/ioredis-mock@8.2.2)(medusa-interfaces@1.3.7)(typeorm@0.3.16)
       commander: 10.0.1
       dotenv: 16.0.3
       express: 4.18.2
@@ -2425,38 +2426,22 @@ packages:
       - ts-node
     dev: false
 
-  /@medusajs/cache-redis@1.8.3(pg@8.11.0):
-    resolution: {integrity: sha512-X7FZxEl4Qw85klHx9sMwXdigqST+r7NtqR2lnHuXnc/r1hBtA7/YP23Hdj9ZHT3fWG+14SVbRqHVID3Dj7SE0w==}
+  /@medusajs/cache-redis@1.8.7:
+    resolution: {integrity: sha512-HeGuI2m6jpousYGLGIXc3dtlcilUYuzrm8cPg6kyorccARQ37SjsZbBCXtxv8E1yS8U9j8drHPg1hp91WTn8Eg==}
     dependencies:
-      '@medusajs/modules-sdk': 1.8.3(ioredis@5.3.2)(pg@8.11.0)(redis@3.1.2)
+      '@medusajs/modules-sdk': 1.8.7
       awilix: 8.0.1
       ioredis: 5.3.2
     transitivePeerDependencies:
-      - '@google-cloud/spanner'
-      - '@sap/hana-client'
-      - better-sqlite3
       - debug
-      - hdb-pool
-      - mongodb
-      - mssql
-      - mysql2
-      - oracledb
-      - pg
-      - pg-native
-      - pg-query-stream
-      - redis
-      - sql.js
-      - sqlite3
       - supports-color
-      - ts-node
-      - typeorm-aurora-data-api-driver
     dev: false
 
-  /@medusajs/medusa-cli@1.3.11(ioredis@5.3.2)(pg@8.11.0)(redis@3.1.2):
+  /@medusajs/medusa-cli@1.3.11(ioredis@5.3.2)(pg@8.11.0):
     resolution: {integrity: sha512-wh5lB2zl2dEWMyP5rRzDu+FHl/gQbx9q8L1bRdysm/HBAdQbvgrRhHWsogE7cNHYDQeZQyUrhqfQ9gkx1Argpg==}
     hasBin: true
     dependencies:
-      '@medusajs/utils': 1.8.2(ioredis@5.3.2)(pg@8.11.0)(redis@3.1.2)(sqlite3@5.1.6)
+      '@medusajs/utils': 1.8.2(ioredis@5.3.2)(pg@8.11.0)(sqlite3@5.1.6)
       axios: 0.21.4
       chalk: 4.1.2
       configstore: 5.0.1
@@ -2507,13 +2492,50 @@ packages:
       - typeorm-aurora-data-api-driver
     dev: false
 
-  /@medusajs/medusa-js@3.0.0(@medusajs/medusa@1.9.0):
-    resolution: {integrity: sha512-oYcHyJ3RCOdQscZVBXGG8JO/GcGs/8kV2UxQy1T5tF6V+HHzazI90zeldxGYtq6XEugb70pLrzsgiPxxSQ2KMw==}
+  /@medusajs/medusa-cli@1.3.15:
+    resolution: {integrity: sha512-NBxvl01cyvucCB6ZeEzHxyjSwH+xUOf+0W+Z5+nOBep1q2WCBIvf7l8UGL4pUHGPIYjJ8JX7XpIT5GKvet4WIw==}
+    hasBin: true
+    dependencies:
+      '@medusajs/utils': 1.9.0
+      axios: 0.21.4
+      chalk: 4.1.2
+      configstore: 5.0.1
+      core-js: 3.31.0
+      dotenv: 8.6.0
+      execa: 5.1.1
+      fs-exists-cached: 1.0.0
+      fs-extra: 10.1.0
+      hosted-git-info: 4.1.0
+      inquirer: 8.2.5
+      is-valid-path: 0.1.1
+      meant: 1.0.3
+      medusa-core-utils: 1.2.0
+      medusa-telemetry: 0.0.16
+      open: 8.4.2
+      ora: 5.4.1
+      pg-god: 1.0.12
+      prompts: 2.4.2
+      regenerator-runtime: 0.13.11
+      resolve-cwd: 3.0.0
+      semver: 7.5.3
+      stack-trace: 0.0.10
+      ulid: 2.3.0
+      url: 0.11.1
+      winston: 3.9.0
+      yargs: 15.4.1
+    transitivePeerDependencies:
+      - debug
+      - pg-native
+      - supports-color
+    dev: false
+
+  /@medusajs/medusa-js@6.0.0(@medusajs/medusa@1.12.0):
+    resolution: {integrity: sha512-R/gxsSXgrxZds4rCnn2VVTROO5U/xTFCMOOx/ZgCeMnVZFZRBoSxJyYdsCYmqkNzDoAysUR+jBcRKZIkp89FYQ==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
-      '@medusajs/medusa': 1.9.0
+      '@medusajs/medusa': 1.12.0
     dependencies:
-      '@medusajs/medusa': 1.9.0(patch_hash=tyowoc5kfxctvjpra75y24b4yy)(@babel/core@7.21.5)(@medusajs/types@1.8.3)(@types/ioredis-mock@8.2.2)(medusa-interfaces@1.3.7)(pg@8.11.0)(typeorm@0.3.16)
+      '@medusajs/medusa': 1.12.0(patch_hash=6hcjeddxpd73rjflmvoibx4tvi)(@babel/core@7.21.5)(@medusajs/types@1.8.7)(@types/ioredis-mock@8.2.2)(medusa-interfaces@1.3.7)(typeorm@0.3.16)
       axios: 0.24.0
       qs: 6.11.2
       retry-axios: 2.6.0(axios@0.24.0)
@@ -2522,18 +2544,18 @@ packages:
       - debug
     dev: false
 
-  /@medusajs/medusa@1.9.0(patch_hash=tyowoc5kfxctvjpra75y24b4yy)(@babel/core@7.21.5)(@medusajs/types@1.8.3)(@types/ioredis-mock@8.2.2)(medusa-interfaces@1.3.7)(pg@8.11.0)(typeorm@0.3.16):
-    resolution: {integrity: sha512-Wu6T0IWsZB3luQ1OZMQn5+aH4LzSd/XOPSdQaeWSj49MzU/WEOsvzFBVhHzh+/zbWjCk028OZKpnYAjFp5/mmw==}
+  /@medusajs/medusa@1.12.0(patch_hash=6hcjeddxpd73rjflmvoibx4tvi)(@babel/core@7.21.5)(@medusajs/types@1.8.7)(@types/ioredis-mock@8.2.2)(medusa-interfaces@1.3.7)(typeorm@0.3.16):
+    resolution: {integrity: sha512-duF6d/e/eXeh6gRGjkDFETIgGlx0QNSw5EczoLBEbDawEZECq5HRznAtsVKukwBN9DYCM0kwm0uuFQ9zti53UQ==}
     hasBin: true
     peerDependencies:
-      '@medusajs/types': 1.8.3
+      '@medusajs/types': 1.8.7
       medusa-interfaces: 1.3.7
-      typeorm: ^0.3.11
+      typeorm: '*'
     dependencies:
-      '@medusajs/medusa-cli': 1.3.11(ioredis@5.3.2)(pg@8.11.0)(redis@3.1.2)
-      '@medusajs/modules-sdk': 1.8.3(ioredis@5.3.2)(pg@8.11.0)(redis@3.1.2)
-      '@medusajs/types': 1.8.3
-      '@medusajs/utils': 1.8.2(ioredis@5.3.2)(pg@8.11.0)(redis@3.1.2)(sqlite3@5.1.6)
+      '@medusajs/medusa-cli': 1.3.15
+      '@medusajs/modules-sdk': 1.8.7
+      '@medusajs/types': 1.8.7
+      '@medusajs/utils': 1.9.0
       '@types/ioredis': 4.28.10
       '@types/lodash': 4.14.195
       awilix: 8.0.1
@@ -2566,7 +2588,7 @@ packages:
       morgan: 1.10.0
       multer: 1.4.5-lts.1
       node-schedule: 2.1.1
-      papaparse: 5.4.1
+      papaparse: 5.3.2
       passport: 0.6.0
       passport-http-bearer: 1.0.1
       passport-jwt: 4.0.1
@@ -2577,64 +2599,30 @@ packages:
       regenerator-runtime: 0.13.11
       request-ip: 2.2.0
       scrypt-kdf: 2.0.1
-      typeorm: 0.3.16(ioredis@5.3.2)(pg@8.11.0)(redis@3.1.2)(sqlite3@5.1.6)
+      typeorm: 0.3.16(ioredis@5.3.2)(pg@8.11.0)(sqlite3@5.1.6)
       ulid: 2.3.0
       uuid: 9.0.0
       winston: 3.9.0
     transitivePeerDependencies:
       - '@babel/core'
-      - '@google-cloud/spanner'
-      - '@sap/hana-client'
       - '@types/ioredis-mock'
-      - better-sqlite3
-      - bluebird
       - debug
-      - encoding
-      - hdb-pool
-      - mongodb
-      - mssql
-      - mysql2
-      - oracledb
-      - pg
       - pg-native
-      - pg-query-stream
-      - sql.js
-      - sqlite3
       - supports-color
-      - ts-node
-      - typeorm-aurora-data-api-driver
     dev: false
     patched: true
 
-  /@medusajs/modules-sdk@1.8.3(ioredis@5.3.2)(pg@8.11.0)(redis@3.1.2):
-    resolution: {integrity: sha512-8j4FhIHz0avll0A7gtQ+hPnee+oWUr2ONgur4Ivj3vrtrjyevW10g3J75A0wFBkrgenvQMd7lqVTRkXqcb0hwg==}
+  /@medusajs/modules-sdk@1.8.7:
+    resolution: {integrity: sha512-NAPFr1m8IlazvSXJg7iSNbavhz6HMkjzmrRXNotqHQZWLkW+8IWdvBzwLIDWQfETEKpGi8K0YMPskvhsxjnU2g==}
     dependencies:
-      '@medusajs/types': 1.8.3
-      '@medusajs/utils': 1.8.2(ioredis@5.3.2)(pg@8.11.0)(redis@3.1.2)(sqlite3@5.1.6)
+      '@medusajs/types': 1.8.7
+      '@medusajs/utils': 1.9.0
       awilix: 8.0.1
       glob: 7.1.6
       medusa-telemetry: 0.0.16
       resolve-cwd: 3.0.0
     transitivePeerDependencies:
-      - '@google-cloud/spanner'
-      - '@sap/hana-client'
-      - better-sqlite3
       - debug
-      - hdb-pool
-      - ioredis
-      - mongodb
-      - mssql
-      - mysql2
-      - oracledb
-      - pg
-      - pg-native
-      - pg-query-stream
-      - redis
-      - sql.js
-      - sqlite3
-      - supports-color
-      - ts-node
-      - typeorm-aurora-data-api-driver
     dev: false
 
   /@medusajs/modules-sdk@1.8.8:
@@ -2646,21 +2634,21 @@ packages:
       resolve-cwd: 3.0.0
     dev: false
 
-  /@medusajs/types@1.8.3:
-    resolution: {integrity: sha512-s5EWRNFmysI3KiqNhTN8P/VfgDDs3eBlEsoll4NsBSkQnKakGeLx3R8FYp05p56FCazTD26wnWLeSOF9JWCJCg==}
+  /@medusajs/types@1.8.7:
+    resolution: {integrity: sha512-4JsiEJH87slp2iAL8Xk1pPVZDXyBsWyN4NZqtQl0MPOZcmM07AvY5whuBNsC2AHRG689gztH7PTFq5zXngMC0Q==}
     dev: false
 
   /@medusajs/types@1.8.9:
     resolution: {integrity: sha512-QlLzNNEh6l5I3cIPP94KPvMTHZOkU4Z9gLHWGTEsiiosZGa+jENpZlbYnw1bd9yTPFvpcqTzyQOYGLL8eTQ7cw==}
     dev: false
 
-  /@medusajs/utils@1.8.2(ioredis@5.3.2)(pg@8.11.0)(redis@3.1.2)(sqlite3@5.1.6):
+  /@medusajs/utils@1.8.2(ioredis@5.3.2)(pg@8.11.0)(sqlite3@5.1.6):
     resolution: {integrity: sha512-jQOSTheGD0w42fj3Ydp/OR8PN+xZLux+0e9ms7vH1480Og2qv7m5ZNJESCpvbtnUGVyuxSjzc/SzMua5L9agVA==}
     dependencies:
       awilix: 8.0.1
       class-transformer: 0.5.1
       class-validator: 0.13.2
-      typeorm: 0.3.16(ioredis@5.3.2)(pg@8.11.0)(redis@3.1.2)(sqlite3@5.1.6)
+      typeorm: 0.3.16(ioredis@5.3.2)(pg@8.11.0)(sqlite3@5.1.6)
       ulid: 2.3.0
     transitivePeerDependencies:
       - '@google-cloud/spanner'
@@ -2681,6 +2669,13 @@ packages:
       - supports-color
       - ts-node
       - typeorm-aurora-data-api-driver
+    dev: false
+
+  /@medusajs/utils@1.9.0:
+    resolution: {integrity: sha512-UP18aFtjH1j8coB3IwBm/3qeZCAlijDLciBkXmG+R1hJWqs1VWrf87Q8UV3B8mHBwjV1qYX/5uSIPY+Cj+6axA==}
+    dependencies:
+      awilix: 8.0.1
+      ulid: 2.3.0
     dev: false
 
   /@medusajs/utils@1.9.1:
@@ -3846,8 +3841,8 @@ packages:
       react: 18.2.0
     dev: true
 
-  /@remix-run/router@1.7.0:
-    resolution: {integrity: sha512-Eu1V3kz3mV0wUpVTiFHuaT8UD1gj/0VnoFHQYX35xlslQUpe8CuYoKFn9d4WZFHm3yDywz6ALZuGdnUPKrNeAw==}
+  /@remix-run/router@1.3.1:
+    resolution: {integrity: sha512-+eun1Wtf72RNRSqgU7qM2AMX/oHp+dnx7BHk1qhK5ZHzdHTUU4LA1mGG1vT+jMc8sbhG3orvsfOmryjzx2PzQw==}
     engines: {node: '>=14'}
     dev: false
 
@@ -9198,12 +9193,12 @@ packages:
       medusa-interfaces: 1.3.7
     dev: false
 
-  /medusa-payment-paypal@4.0.0(@medusajs/medusa@1.9.0):
+  /medusa-payment-paypal@4.0.0(@medusajs/medusa@1.12.0):
     resolution: {integrity: sha512-nU7/8UVxFqYxxgHgxL3aT26Wd1y1Y1vjt9f+Wt/EQyOv6U8m5QfK60F2xTaJkgvg8TlzaCik5sd0ZR3Xxdq7Fw==}
     peerDependencies:
       '@medusajs/medusa': 1.10.0
     dependencies:
-      '@medusajs/medusa': 1.9.0(patch_hash=tyowoc5kfxctvjpra75y24b4yy)(@babel/core@7.21.5)(@medusajs/types@1.8.3)(@types/ioredis-mock@8.2.2)(medusa-interfaces@1.3.7)(pg@8.11.0)(typeorm@0.3.16)
+      '@medusajs/medusa': 1.12.0(patch_hash=6hcjeddxpd73rjflmvoibx4tvi)(@babel/core@7.21.5)(@medusajs/types@1.8.7)(@types/ioredis-mock@8.2.2)(medusa-interfaces@1.3.7)(typeorm@0.3.16)
       '@paypal/checkout-server-sdk': 1.0.3
       axios: 1.4.0
       body-parser: 1.20.2
@@ -9228,17 +9223,17 @@ packages:
       - supports-color
     dev: false
 
-  /medusa-react@6.0.0(@medusajs/medusa@1.9.0)(@tanstack/react-query@4.22.0)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-cNEBkDQY6V3iBLmrtNuUk+ZT2lvN9dsUQnhzS6ZUaezWA2iNqcn6sYlyXxqbt+K04eFOx0+9bZ5dg4qPNvQEFg==}
+  /medusa-react@9.0.0(@medusajs/medusa@1.12.0)(@tanstack/react-query@4.22.0)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-S3Ag8IolBT4/FDN2NPObPCo4n1GupAjL/EmTVq+ayv6eU+QqAahMblhFHY+X2UDFQVhr4EOny42nAtY1I84Now==}
     engines: {node: '>=10'}
     peerDependencies:
-      '@medusajs/medusa': 1.9.0
+      '@medusajs/medusa': 1.12.0
       '@tanstack/react-query': ^4.22.0
       react: ^16.8 || ^17.0 || ^18.0
       react-dom: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      '@medusajs/medusa': 1.9.0(patch_hash=tyowoc5kfxctvjpra75y24b4yy)(@babel/core@7.21.5)(@medusajs/types@1.8.3)(@types/ioredis-mock@8.2.2)(medusa-interfaces@1.3.7)(pg@8.11.0)(typeorm@0.3.16)
-      '@medusajs/medusa-js': 3.0.0(@medusajs/medusa@1.9.0)
+      '@medusajs/medusa': 1.12.0(patch_hash=6hcjeddxpd73rjflmvoibx4tvi)(@babel/core@7.21.5)(@medusajs/types@1.8.7)(@types/ioredis-mock@8.2.2)(medusa-interfaces@1.3.7)(typeorm@0.3.16)
+      '@medusajs/medusa-js': 6.0.0(@medusajs/medusa@1.12.0)
       '@tanstack/react-query': 4.22.0(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -9927,8 +9922,8 @@ packages:
     resolution: {integrity: sha512-HAKu/fG3HpHFO0AA8WE8q2g+gBJaZ9MG7fcKk+IJPLTGAD6Psw4443l+9DGRbOIh3/aXr7Phy0TjilYivJo5XQ==}
     dev: false
 
-  /papaparse@5.4.1:
-    resolution: {integrity: sha512-HipMsgJkZu8br23pW15uvo6sib6wne/4woLZPlFf3rpDyMe9ywEXUsuD7+6K9PRkJlVT51j/sCOYDKGGS3ZJrw==}
+  /papaparse@5.3.2:
+    resolution: {integrity: sha512-6dNZu0Ki+gyV0eBsFKJhYr+MdQYAzFUGlBMNj3GNrmHxmz1lfRa24CjFObPXtjcetlOv5Ad299MhIK0znp3afw==}
     dev: false
 
   /parent-module@1.0.1:
@@ -10649,16 +10644,19 @@ packages:
     resolution: {integrity: sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==}
     dev: false
 
-  /react-helmet@6.1.0(react@18.2.0):
-    resolution: {integrity: sha512-4uMzEY9nlDlgxr61NL3XbKRy1hEkXmKNXhjbAIOVw5vcFrsdYbH2FEwcNyWvWinl103nXgzYNlns9ca+8kFiWw==}
+  /react-helmet-async@1.3.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-9jZ57/dAn9t3q6hneQS0wukqC2ENOBgMNVEhb/ZG9ZSxUetzVIw4iAmEU38IaVg3QGYauQPhSeUTuIUtFglWpg==}
     peerDependencies:
-      react: '>=16.3.0'
+      react: ^16.6.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.6.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      object-assign: 4.1.1
+      '@babel/runtime': 7.22.5
+      invariant: 2.2.4
       prop-types: 15.8.1
       react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
       react-fast-compare: 3.2.2
-      react-side-effect: 2.1.2(react@18.2.0)
+      shallowequal: 1.1.0
     dev: false
 
   /react-highlight-words@0.18.0(react@18.2.0):
@@ -10681,8 +10679,8 @@ packages:
       react: 18.2.0
     dev: false
 
-  /react-hot-toast@2.4.1(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-j8z+cQbWIM5LY37pR6uZR6D4LfseplqnuAO4co4u8917hBUvXlEqyP1ZzqVLcqoyUesZZv/ImreoCeHVDpE5pQ==}
+  /react-hot-toast@2.4.0(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-qnnVbXropKuwUpriVVosgo8QrB+IaPJCpL8oBI6Ov84uvHZ5QQcTp2qg6ku2wNfgJl6rlQXJIQU5q+5lmPOutA==}
     engines: {node: '>=10'}
     peerDependencies:
       react: '>=16'
@@ -10819,26 +10817,26 @@ packages:
       use-sidecar: 1.1.2(@types/react@18.2.14)(react@18.2.0)
     dev: false
 
-  /react-router-dom@6.14.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-YEwlApKwzMMMbGbhh+Q7MsloTldcwMgHxUY/1g0uA62+B1hZo2jsybCWIDCL8zvIDB1FA0pBKY9chHbZHt+2dQ==}
+  /react-router-dom@6.8.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-hQouduSTywGJndE86CXJ2h7YEy4HYC6C/uh19etM+79FfQ6cFFFHnHyDlzO4Pq0eBUI96E4qVE5yUjA00yJZGQ==}
     engines: {node: '>=14'}
     peerDependencies:
       react: '>=16.8'
       react-dom: '>=16.8'
     dependencies:
-      '@remix-run/router': 1.7.0
+      '@remix-run/router': 1.3.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      react-router: 6.14.0(react@18.2.0)
+      react-router: 6.8.0(react@18.2.0)
     dev: false
 
-  /react-router@6.14.0(react@18.2.0):
-    resolution: {integrity: sha512-OD+vkrcGbvlwkspUFDgMzsu1RXwdjNh83YgG/28lBnDzgslhCgxIqoExLlxsfTpIygp7fc+Hd3esloNwzkm2xA==}
+  /react-router@6.8.0(react@18.2.0):
+    resolution: {integrity: sha512-760bk7y3QwabduExtudhWbd88IBbuD1YfwzpuDUAlJUJ7laIIcqhMvdhSVh1Fur1PE8cGl84L0dxhR3/gvHF7A==}
     engines: {node: '>=14'}
     peerDependencies:
       react: '>=16.8'
     dependencies:
-      '@remix-run/router': 1.7.0
+      '@remix-run/router': 1.3.1
       react: 18.2.0
     dev: false
 
@@ -10861,14 +10859,6 @@ packages:
       use-isomorphic-layout-effect: 1.1.2(@types/react@18.2.14)(react@18.2.0)
     transitivePeerDependencies:
       - '@types/react'
-    dev: false
-
-  /react-side-effect@2.1.2(react@18.2.0):
-    resolution: {integrity: sha512-PVjOcvVOyIILrYoyGEpDN3vmYNLdy1CajSFNt4TDsVQC5KpTijDvWVoR+/7Rz2xT978D8/ZtFceXxzsPwZEDvw==}
-    peerDependencies:
-      react: ^16.3.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      react: 18.2.0
     dev: false
 
   /react-style-singleton@2.2.1(@types/react@18.2.14)(react@18.2.0):
@@ -11303,6 +11293,10 @@ packages:
     dependencies:
       inherits: 2.0.4
       safe-buffer: 5.2.1
+    dev: false
+
+  /shallowequal@1.1.0:
+    resolution: {integrity: sha512-y0m1JoUZSlPAjXVtPPW70aZWfIL/dSP7AFkRnniLCrK/8MDKog3TySTBmckD+RObVxH0v4Tox67+F14PdED2oQ==}
     dev: false
 
   /shebang-command@1.2.0:
@@ -11977,7 +11971,7 @@ packages:
     resolution: {integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==}
     dev: false
 
-  /typeorm@0.3.16(ioredis@5.3.2)(pg@8.11.0)(redis@3.1.2)(sqlite3@5.1.6):
+  /typeorm@0.3.16(ioredis@5.3.2)(pg@8.11.0)(sqlite3@5.1.6):
     resolution: {integrity: sha512-wJ4Qy1oqRKNDdZiBTTaVMqwo/XxC52Q7uNPTjltPgLhvIW173bL6Iad0lhptMOsFlpixFPaUu3PNziaRBwX2Zw==}
     engines: {node: '>= 12.9.0'}
     hasBin: true
@@ -12047,7 +12041,6 @@ packages:
       ioredis: 5.3.2
       mkdirp: 2.1.6
       pg: 8.11.0
-      redis: 3.1.2
       reflect-metadata: 0.1.13
       sha.js: 2.4.11
       sqlite3: 5.1.6
