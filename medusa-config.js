@@ -33,8 +33,6 @@ const DATABASE_URL = process.env.DATABASE_URL || 'postgres://localhost:5432'
 // Medusa uses Redis, so this needs configuration as well
 const REDIS_URL = process.env.REDIS_URL || 'redis://localhost:6379'
 const CACHE_REDIS_URL = process.env.CACHE_REDIS_URL || 'redis://localhost:6379'
-const EVENTS_REDIS_URL =
-  process.env.EVENTS_REDIS_URL || 'redis://localhost:6379'
 
 // Stripe keys
 const STRIPE_API_KEY = process.env.STRIPE_API_KEY || ''
@@ -80,17 +78,7 @@ const plugins = [
 
 const modules = {
   eventBus: {
-    resolve: '@medusajs/event-bus-redis',
-    options: {
-      redisUrl: EVENTS_REDIS_URL,
-      queueOptions: {
-        blockingConnection: false,
-      },
-      workerOptions: {
-        stalledInterval: 300000,
-        drainDelay: 10,
-      },
-    },
+    resolve: './custom_modules/joonieshop-event-bus',
   },
   cacheService: {
     resolve: '@medusajs/cache-redis',
