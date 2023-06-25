@@ -31,8 +31,8 @@ const STORE_CORS = process.env.STORE_CORS || 'http://192.168.1.153:8000'
 const DATABASE_URL = process.env.DATABASE_URL || 'postgres://localhost:5432'
 
 // Medusa uses Redis, so this needs configuration as well
-const REDIS_URL = process.env.REDIS_URL || 'redis://localhost:6379'
-const CACHE_REDIS_URL = process.env.CACHE_REDIS_URL || 'redis://localhost:6379'
+const REDIS_URL = process.env.REDIS_URL
+const CACHE_REDIS_URL = process.env.CACHE_REDIS_URL
 
 // Stripe keys
 const STRIPE_API_KEY = process.env.STRIPE_API_KEY || ''
