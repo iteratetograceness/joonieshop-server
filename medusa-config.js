@@ -30,7 +30,6 @@ const STORE_CORS = process.env.STORE_CORS || 'http://192.168.1.153:8000'
 // Database URL (here we use a local database called medusa-development)
 const DATABASE_URL = process.env.DATABASE_URL || 'postgres://localhost:5432'
 
-// Medusa uses Redis, so this needs configuration as well
 const REDIS_URL = process.env.REDIS_URL
 const CACHE_REDIS_URL = process.env.CACHE_REDIS_URL
 
@@ -79,14 +78,6 @@ const plugins = [
 const modules = {
   eventBus: {
     resolve: 'joonieshop-event-bus',
-    options: {
-      setupWorkerOptions: {
-        pauseInterval:
-          process.env.NODE_ENV === 'development' ? 30 * 1000 : 15 * 60 * 1000,
-        pauseDuration:
-          process.env.NODE_ENV === 'development' ? 30 * 1000 : 15 * 60 * 1000,
-      },
-    },
   },
   cacheService: {
     resolve: '@medusajs/cache-redis',
