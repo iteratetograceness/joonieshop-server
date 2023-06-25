@@ -32,6 +32,7 @@ const DATABASE_URL = process.env.DATABASE_URL || 'postgres://localhost:5432'
 
 const REDIS_URL = process.env.REDIS_URL
 const CACHE_REDIS_URL = process.env.CACHE_REDIS_URL
+const EVENT_BUS_REDIS_URL = process.env.EVENT_BUS_REDIS_URL
 
 // Stripe keys
 const STRIPE_API_KEY = process.env.STRIPE_API_KEY || ''
@@ -78,6 +79,9 @@ const plugins = [
 const modules = {
   eventBus: {
     resolve: 'joonieshop-event-bus',
+    options: {
+      redisUrl: EVENT_BUS_REDIS_URL,
+    },
   },
   cacheService: {
     resolve: '@medusajs/cache-redis',
