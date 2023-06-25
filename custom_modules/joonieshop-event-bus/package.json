@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "watch": "tsc --build --watch",
-    "prepare": "cross-env NODE_ENV=production yarn run build",
+    "prepare": "cross-env NODE_ENV=production pnpm build",
     "build": "tsc --build",
     "test": "jest --passWithNoTests"
   },
@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@medusajs/types": "^1.8.9",
+    "cross-env": "^7.0.3",
     "typescript": "^5.1.3"
   }
 }
