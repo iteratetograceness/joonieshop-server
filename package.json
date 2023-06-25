@@ -34,7 +34,6 @@
     "resend": "^0.15.1",
     "typeorm": "^0.3.11"
   },
-  "repository": "https://github.com/medusajs/medusa-starter-default.git",
   "keywords": [
     "sqlite",
     "ecommerce",
