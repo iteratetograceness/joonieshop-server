@@ -78,7 +78,15 @@ const plugins = [
 
 const modules = {
   eventBus: {
-    resolve: './custom_modules/joonieshop-event-bus',
+    resolve: 'joonieshop-event-bus',
+    options: {
+      setupWorkerOptions: {
+        pauseInterval:
+          process.env.NODE_ENV === 'development' ? 30 * 1000 : 15 * 60 * 1000,
+        pauseDuration:
+          process.env.NODE_ENV === 'development' ? 30 * 1000 : 15 * 60 * 1000,
+      },
+    },
   },
   cacheService: {
     resolve: '@medusajs/cache-redis',
