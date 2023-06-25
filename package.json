@@ -5,13 +5,13 @@
   "license": "MIT",
   "scripts": {
     "clean": "cross-env ./node_modules/.bin/rimraf dist",
-    "build": "cross-env npm run clean && tsc -p tsconfig.json",
+    "build": "cross-env pnpm run clean && tsc -p tsconfig.json",
     "watch": "cross-env tsc --watch",
     "test": "cross-env jest",
     "seed": "cross-env medusa seed -f ./data/seed.json",
-    "start": "cross-env npm run build && medusa start",
-    "start:custom": "cross-env npm run build && node --preserve-symlinks index.js",
-    "dev": "cross-env npm run build && medusa develop",
+    "start": "cross-env pnpm run build && medusa start",
+    "start:custom": "cross-env pnpm run build && node --preserve-symlinks index.js",
+    "dev": "cross-env pnpm run build && medusa develop",
     "build:admin": "cross-env medusa-admin build"
   },
   "dependencies": {
